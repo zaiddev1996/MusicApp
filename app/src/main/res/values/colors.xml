@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red_200">#FF8285</color>
+    <color name="red_500">#e42024</color>
+    <color name="red_700">#C5070A</color>
+    <color name="teal_200">#0288D1</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <!--Same colors-->
+    <color name="force_black">#FF000000</color>
+    <color name="force_white">#FFFFFFFF</color>
+    <color name="light">#F4F4F4</color>
+</resources>

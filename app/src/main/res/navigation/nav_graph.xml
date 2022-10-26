@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <action
+        android:id="@+id/action_MainActivity_to_searchArtistFragment"
+        app:destination="@id/searchArtistFragment" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.appsfactory.test.ui.home.HomeFragment"
+        android:label="@string/albums"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_albumDetailFragment"
+            app:destination="@id/albumDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/albumFragment"
+        android:name="com.appsfactory.test.ui.album.AlbumFragment"
+        android:label="@string/top_albums"
+        tools:layout="@layout/fragment_album">
+        <argument
+            android:name="artist"
+            app:argType="com.appsfactory.test.domain.model.artist.Artist" />
+        <action
+            android:id="@+id/action_albumFragment_to_albumDetailFragment"
+            app:destination="@id/albumDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchArtistFragment"
+        android:name="com.appsfactory.test.ui.search_artist.SearchArtistFragment"
+        android:label="@string/search_artist"
+        tools:layout="@layout/fragment_search_artist">
+        <action
+            android:id="@+id/action_searchArtistFragment_to_albumFragment"
+            app:destination="@id/albumFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/albumDetailFragment"
+        android:name="com.appsfactory.test.ui.album_detail.AlbumDetailFragment"
+        android:label="@string/album_details"
+        tools:layout="@layout/fragment_album_detail">
+        <argument
+            android:name="album"
+            app:argType="com.appsfactory.test.domain.model.album.Album" />
+    </fragment>
+
+</navigation>
